@@ -29,7 +29,8 @@ class Controller {
                 "description":result.weather[0].description,
                 "humidity":result.main.humidity,
                 "wind_speed":result.wind.speed,
-                "icon": result.weather[0].icon
+                "icon": result.weather[0].icon,
+                "city_name":result.name
             }
             json = {
                 "response" : "SUCCESS",
