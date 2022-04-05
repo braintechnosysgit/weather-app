@@ -21,9 +21,10 @@ async location(cityName,apiKey) {
 }
  async locationZipcode(zipCode,apiKey){
      try{
-        let result_ = await axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`);
-        return result_.data;
-     }catch{
+        let result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${zipCode}&appid=${apiKey}`);
+        return result.data;
+     }catch(e){
+         console.log(e)
 
      }
  }

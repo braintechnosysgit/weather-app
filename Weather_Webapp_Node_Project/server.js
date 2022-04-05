@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.use('/api',route)
 
 
-app.listen(4000,()=>{
-    console.log('Server starts on port 4000...');
+app.listen(3000,()=>{
+    console.log('Server starts on port 3000...');
 })
 
 

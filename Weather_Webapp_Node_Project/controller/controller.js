@@ -24,15 +24,13 @@ class Controller {
                  result = await this.service.location(cityName,apiKey);
             }
             
-           
-            console.log("---------------",result);
             let data = {               
                 "temperature": result.main.temp,
                 "description":result.weather[0].description,
                 "humidity":result.main.humidity,
-                "wind_speed":result.wind.speed
+                "wind_speed":result.wind.speed,
+                "icon": result.weather[0].icon
             }
-            console.log(data)
             json = {
                 "response" : "SUCCESS",
                 "data": data
